@@ -1,6 +1,9 @@
 package com.thunsaker.javapin;
 
-public class PinterestSettings {		
+public class PinterestSettings {
+	// Enter your settings in this class
+	// Register for an API key: http://pinterest.com/developers/applications/new/
+	
 	private static String ApplicationId = "YOUR_APPLICATION_ID";
 	public static String getApplicationId() {
 		return ApplicationId;
