@@ -16,7 +16,7 @@ import org.json.JSONObject;
 import com.thunsaker.javapin.PinterestSettings;
 import com.thunsaker.javapin.classes.Pin;
 
-public class Popular {
+public class PopularEndpoint {
 	public static String status = "";
 	
 	public static List<Pin> getPopularPins(){
