@@ -19,14 +19,18 @@ public class PinterestSettings {
 		return CallbackUrl;
 	}
 	
-	
 	private static String BaseUrl = "https://api.pinterest.com/v2/";
 	public static String getBaseUrl() {
 		return BaseUrl;
 	}
 	
-	private static String PopularEndpoint = "popular/";
-	public static String getPopularEndpoint() {
-		return PopularEndpoint;
+	private static String PopularEndpointUrl = "popular/";
+	public static String getPopularEndpointUrl() {
+		return PopularEndpointUrl;
+	}
+
+	private static String UserEndpointUrl = "users/%s/";
+	public static String getUserEndpointUrl() {
+		return UserEndpointUrl;
 	}
 }
