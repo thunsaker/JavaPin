@@ -10,12 +10,12 @@ import com.thunsaker.javapin.endpoints.UserEndpoint;
 public class Pinterest {
 	public Pinterest(){ }
 	
-	public static List<Pin> PopularPins() throws Exception {
+	public static List<Pin> GetPopularPins() throws Exception {
 		PopularEndpoint popular = new PopularEndpoint();
 		return popular.GetPopularPins();
 	}
 	
-	public static User UserInfo(String Username) throws Exception {
+	public static User GetUserInfo(String Username) throws Exception {
 		UserEndpoint user = new UserEndpoint();
 		return user.GetUser(Username);
 	}

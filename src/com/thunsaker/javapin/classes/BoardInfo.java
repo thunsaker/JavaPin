@@ -101,9 +101,9 @@ public class BoardInfo extends Base implements IJsonParsable {
 			myBoardInfo.setUserId(JsonObjectToParse.getString("user_id"));
 		if(JsonObjectToParse.has("category"))
 			myBoardInfo.setCategory(JsonObjectToParse.getString("category"));
-		if(JsonObjectToParse.has("is_collaborator"))
+		if(JsonObjectToParse.has("is_collaborator") && !JsonObjectToParse.isNull("is_collaborator") && JsonObjectToParse.getString("is_collaborator") != "null")
 			myBoardInfo.setIsCollaborator(JsonObjectToParse.getBoolean("is_collaborator"));
-		if(JsonObjectToParse.has("is_following"))
+		if(JsonObjectToParse.has("is_following") && !JsonObjectToParse.isNull("is_following") && JsonObjectToParse.getString("is_following") != "null")
 			myBoardInfo.setIsFollowing(JsonObjectToParse.getBoolean("is_following"));
 		if(JsonObjectToParse.has("thumbnails")) {
 			JSONArray thumbArray = JsonObjectToParse.getJSONArray("thumbnails");

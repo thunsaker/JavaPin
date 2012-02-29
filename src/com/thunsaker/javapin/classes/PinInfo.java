@@ -103,9 +103,9 @@ public class PinInfo implements IJsonParsable {
 		}
 		if(JsonObjectToParse.has("created_at"))
 			myPin.setCreatedAt(JsonObjectToParse.getString("created_at"));
-		if(JsonObjectToParse.has("is_repin"))
+		if(JsonObjectToParse.has("is_repin") && !JsonObjectToParse.isNull("is_repin") && JsonObjectToParse.getString("is_repin") != "null")
 			myPin.setIsRepin(JsonObjectToParse.getBoolean("is_repin"));
-		if(JsonObjectToParse.has("is_video"))
+		if(JsonObjectToParse.has("is_video") && !JsonObjectToParse.isNull("is_video") && JsonObjectToParse.getString("is_video") != "null")
 			myPin.setIsVideo(JsonObjectToParse.getBoolean("is_video"));
 		if(JsonObjectToParse.has("source"))
 			myPin.setSourceUrl(JsonObjectToParse.getString("source"));

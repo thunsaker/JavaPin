@@ -143,7 +143,7 @@ public class User extends Base implements IJsonParsable {
 			myUser.setFacebookLink(JsonObjectToParse.getString("facebook_link"));
 		if(JsonObjectToParse.has("location"))
 			myUser.setLocation(JsonObjectToParse.getString("location"));
-		if(JsonObjectToParse.has("is_following"))
+		if(JsonObjectToParse.has("is_following") && !JsonObjectToParse.isNull("is_following") && JsonObjectToParse.getString("is_following") != "null")
 			myUser.setIsFollowing(JsonObjectToParse.getBoolean("is_following"));
 		if(JsonObjectToParse.has("stats")) {
 			Hashtable<String, Integer> myStats = new Hashtable<String, Integer>();

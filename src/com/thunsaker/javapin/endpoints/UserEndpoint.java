@@ -18,7 +18,7 @@ public class UserEndpoint {
 	public User GetUser(String Username) throws Exception {
 		if(Username != null && Username != "") {
 			String userUrl = PinterestSettings.getBaseUrl() + PinterestSettings.getUserEndpointUrl();
-			String.format(userUrl, Username);
+			userUrl = String.format(userUrl, Username);
 			String rawJson = Util.getRawJson(userUrl);
 			User UserInfo = ParseResponse(rawJson);
 			if(UserInfo != null)
@@ -36,7 +36,7 @@ public class UserEndpoint {
 			if(jObject.has("status")) {
 				status = Util.GetStatus(jObject.getString("status"));
 				
-				if(status.code != 200)
+				if(status.code != null && status.code != 200)
 					return null;
 			}
 			

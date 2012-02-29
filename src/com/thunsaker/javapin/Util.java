@@ -45,7 +45,7 @@ public class Util {
 	
 	public static EndpointStatus GetStatus(String status) {
 		EndpointStatus s = new EndpointStatus();
-		if(status == "success") {
+		if(status.contains("success")) {
 			s.code = 200;
 			s.message = "Success";
 		} else if(status.startsWith("4")) {
